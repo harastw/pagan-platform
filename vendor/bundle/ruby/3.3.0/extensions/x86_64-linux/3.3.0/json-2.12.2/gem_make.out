@@ -1,0 +1,30 @@
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/json-2.12.2/ext/json/ext/parser
+/usr/bin/ruby33 extconf.rb
+checking for rb_enc_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for strnlen() in string.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/json-2.12.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-s35opq sitelibdir\=./.gem.20250626-18798-s35opq clean
+rm -f 
+rm -fr parser.so false parser.o *.bak mkmf.log .*.time
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/json-2.12.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-s35opq sitelibdir\=./.gem.20250626-18798-s35opq
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DHAVE_RB_ENC_INTERNED_STR -DHAVE_RB_HASH_NEW_CAPA -DHAVE_RB_HASH_BULK_INSERT -DHAVE_STRNLEN    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC -std=c99  -o parser.o -c parser.c
+rm -f parser.so
+x86_64-pc-linux-gnu-gcc -shared -o parser.so parser.o -L. -L/usr/lib64 -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby33  -lm -lpthread  -lc
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/json-2.12.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-s35opq sitelibdir\=./.gem.20250626-18798-s35opq install
+mkdir -p . ./.gem.20250626-18798-s35opq/json/ext
+exit > .sitearchdir.-.json.-.ext.time
+/usr/bin/install -c -m 0755 parser.so ./.gem.20250626-18798-s35opq/json/ext
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/json-2.12.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-s35opq sitelibdir\=./.gem.20250626-18798-s35opq clean
+rm -f 
+rm -fr parser.so false parser.o *.bak mkmf.log .*.time

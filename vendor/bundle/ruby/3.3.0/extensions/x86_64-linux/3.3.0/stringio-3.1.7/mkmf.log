@@ -1,0 +1,31 @@
+have_type: checking for rb_io_mode_t in ruby/io.h... -------------------- no
+
+ "x86_64-pc-linux-gnu-gcc -o conftest -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I.    -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby33  -lm -lpthread  -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+ "x86_64-pc-linux-gnu-gcc -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I.    -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC   -c conftest.c"
+conftest.c:6:9: error: unknown type name ‘rb_io_mode_t’; did you mean ‘rb_mode_t’?
+    6 | typedef rb_io_mode_t conftest_type;
+      |         ^~~~~~~~~~~~
+      |         rb_mode_t
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/io.h>
+4: 
+5: /*top*/
+6: typedef rb_io_mode_t conftest_type;
+7: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+

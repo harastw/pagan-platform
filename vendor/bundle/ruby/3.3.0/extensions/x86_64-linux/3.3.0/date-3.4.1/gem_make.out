@@ -1,0 +1,31 @@
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+/usr/bin/ruby33 extconf.rb
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-13cur7 sitelibdir\=./.gem.20250626-18798-13cur7 clean
+rm -f 
+rm -fr date_core.so false date_core.o date_parse.o date_strftime.o date_strptime.o *.bak mkmf.log .*.time
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-13cur7 sitelibdir\=./.gem.20250626-18798-13cur7
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o date_core.o -c date_core.c
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o date_parse.o -c date_parse.c
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o date_strftime.o -c date_strftime.c
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o date_strptime.o -c date_strptime.c
+rm -f date_core.so
+x86_64-pc-linux-gnu-gcc -shared -o date_core.so date_core.o date_parse.o date_strftime.o date_strptime.o -L. -L/usr/lib64 -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby33  -lm -lpthread  -lc
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-13cur7 sitelibdir\=./.gem.20250626-18798-13cur7 install
+mkdir -p . ./.gem.20250626-18798-13cur7
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 date_core.so ./.gem.20250626-18798-13cur7
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-13cur7 sitelibdir\=./.gem.20250626-18798-13cur7 clean
+rm -f 
+rm -fr date_core.so false date_core.o date_parse.o date_strftime.o date_strptime.o *.bak mkmf.log .*.time

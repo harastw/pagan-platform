@@ -1,0 +1,324 @@
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/pg-1.5.9/ext
+/usr/bin/ruby33 extconf.rb
+Calling libpq with GVL unlocked
+checking for pg_config... yes
+Using config values from /bin/pg_config
+checking for whether -Wl,-rpath,/usr/lib64/postgresql-17/lib64 is accepted as LDFLAGS... yes
+Using libpq from /usr/lib64/postgresql-17/lib64
+checking for libpq-fe.h... yes
+checking for libpq/libpq-fs.h... yes
+checking for pg_config_manual.h... yes
+checking for PQconnectdb() in -lpq... yes
+checking for PQconninfo() in libpq-fe.h... yes
+checking for PQsslAttribute() in libpq-fe.h... yes
+checking for PQresultVerboseErrorMessage() in libpq-fe.h... yes
+checking for PQencryptPasswordConn() in libpq-fe.h... yes
+checking for PQresultMemorySize() in libpq-fe.h... yes
+checking for PQenterPipelineMode() in libpq-fe.h... yes
+checking for timegm()... yes
+checking for rb_gc_adjust_memory_usage()... yes
+checking for rb_gc_mark_movable()... yes
+checking for rb_io_wait()... yes
+checking for rb_io_descriptor()... yes
+checking for unistd.h... yes
+checking for inttypes.h... yes
+checking for C99 variable length arrays... yes
+creating extconf.h
+creating Makefile
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/pg-1.5.9/ext
+make DESTDIR\= sitearchdir\=./.gem.20250627-28844-74rh8a sitelibdir\=./.gem.20250627-28844-74rh8a clean
+rm -f 
+rm -fr pg_ext.so false gvl_wrappers.o pg.o pg_binary_decoder.o pg_binary_encoder.o pg_coder.o pg_connection.o pg_copy_coder.o pg_errors.o pg_record_coder.o pg_result.o pg_text_decoder.o pg_text_encoder.o pg_tuple.o pg_type_map.o pg_type_map_all_strings.o pg_type_map_by_class.o pg_type_map_by_column.o pg_type_map_by_mri_type.o pg_type_map_by_oid.o pg_type_map_in_ruby.o pg_util.o *.bak mkmf.log .*.time
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/pg-1.5.9/ext
+make DESTDIR\= sitearchdir\=./.gem.20250627-28844-74rh8a sitelibdir\=./.gem.20250627-28844-74rh8a
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o gvl_wrappers.o -c gvl_wrappers.c
+In file included from pg.h:60,
+                 from gvl_wrappers.c:6:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg.o -c pg.c
+In file included from pg.h:60,
+                 from pg.c:48:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_binary_decoder.o -c pg_binary_decoder.c
+In file included from pg.h:60,
+                 from pg_binary_decoder.c:8:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_binary_encoder.o -c pg_binary_encoder.c
+In file included from pg.h:60,
+                 from pg_binary_encoder.c:7:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_coder.o -c pg_coder.c
+In file included from pg.h:60,
+                 from pg_coder.c:6:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_connection.o -c pg_connection.c
+In file included from pg.h:60,
+                 from pg_connection.c:7:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_copy_coder.o -c pg_copy_coder.c
+In file included from pg.h:60,
+                 from pg_copy_coder.c:6:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_errors.o -c pg_errors.c
+In file included from pg.h:60,
+                 from pg_errors.c:6:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_record_coder.o -c pg_record_coder.c
+In file included from pg.h:60,
+                 from pg_record_coder.c:6:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_result.o -c pg_result.c
+In file included from pg.h:60,
+                 from pg_result.c:7:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_text_decoder.o -c pg_text_decoder.c
+In file included from pg.h:60,
+                 from pg_text_decoder.c:32:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_text_encoder.o -c pg_text_encoder.c
+In file included from pg.h:60,
+                 from pg_text_encoder.c:43:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_tuple.o -c pg_tuple.c
+In file included from pg.h:60,
+                 from pg_tuple.c:1:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_type_map.o -c pg_type_map.c
+In file included from pg.h:60,
+                 from pg_type_map.c:7:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_type_map_all_strings.o -c pg_type_map_all_strings.c
+In file included from pg.h:60,
+                 from pg_type_map_all_strings.c:9:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_type_map_by_class.o -c pg_type_map_by_class.c
+In file included from pg.h:60,
+                 from pg_type_map_by_class.c:10:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_type_map_by_column.o -c pg_type_map_by_column.c
+In file included from pg.h:60,
+                 from pg_type_map_by_column.c:7:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_type_map_by_mri_type.o -c pg_type_map_by_mri_type.c
+In file included from pg.h:60,
+                 from pg_type_map_by_mri_type.c:10:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_type_map_by_oid.o -c pg_type_map_by_oid.c
+In file included from pg.h:60,
+                 from pg_type_map_by_oid.c:7:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_type_map_in_ruby.o -c pg_type_map_in_ruby.c
+In file included from pg.h:60,
+                 from pg_type_map_in_ruby.c:7:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRUBY_EXTCONF_H=\"extconf.h\" -I/usr/include/postgresql-17    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o pg_util.o -c pg_util.c
+In file included from pg.h:60,
+                 from pg_util.c:7:
+/usr/include/postgresql-17/pg_config.h:810:9: warning: "restrict" redefined
+  810 | #define restrict __restrict
+      |         ^~~~~~~~
+In file included from /usr/include/ruby-3.3.0/ruby/internal/config.h:22,
+                 from /usr/include/ruby-3.3.0/ruby/ruby.h:15,
+                 from /usr/include/ruby-3.3.0/ruby.h:38,
+                 from pg.h:21:
+/usr/include/ruby-3.3.0/x86_64-linux/ruby/config.h:87:9: note: this is the location of the previous definition
+   87 | #define restrict __restrict__
+      |         ^~~~~~~~
+rm -f pg_ext.so
+x86_64-pc-linux-gnu-gcc -shared -o pg_ext.so gvl_wrappers.o pg.o pg_binary_decoder.o pg_binary_encoder.o pg_coder.o pg_connection.o pg_copy_coder.o pg_errors.o pg_record_coder.o pg_result.o pg_text_decoder.o pg_text_encoder.o pg_tuple.o pg_type_map.o pg_type_map_all_strings.o pg_type_map_by_class.o pg_type_map_by_column.o pg_type_map_by_mri_type.o pg_type_map_by_oid.o pg_type_map_in_ruby.o pg_util.o -L. -L/usr/lib64 -L/usr/lib64/postgresql-17/lib64 -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-rpath,/usr/lib64/postgresql-17/lib64 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby33 -lpq  -lm -lpthread  -lc
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/pg-1.5.9/ext
+make DESTDIR\= sitearchdir\=./.gem.20250627-28844-74rh8a sitelibdir\=./.gem.20250627-28844-74rh8a install
+mkdir -p . ./.gem.20250627-28844-74rh8a
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 pg_ext.so ./.gem.20250627-28844-74rh8a
+mkdir -p . ./.gem.20250627-28844-74rh8a/pg/
+exit > .sitelibdir.-.pg.time
+/usr/bin/install -c -m 644 postgresql_lib_path.rb .gem.20250627-28844-74rh8a/pg/
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/pg-1.5.9/ext
+make DESTDIR\= sitearchdir\=./.gem.20250627-28844-74rh8a sitelibdir\=./.gem.20250627-28844-74rh8a clean
+rm -f 
+rm -fr pg_ext.so false gvl_wrappers.o pg.o pg_binary_decoder.o pg_binary_encoder.o pg_coder.o pg_connection.o pg_copy_coder.o pg_errors.o pg_record_coder.o pg_result.o pg_text_decoder.o pg_text_encoder.o pg_tuple.o pg_type_map.o pg_type_map_all_strings.o pg_type_map_by_class.o pg_type_map_by_column.o pg_type_map_by_mri_type.o pg_type_map_by_oid.o pg_type_map_in_ruby.o pg_util.o *.bak mkmf.log .*.time

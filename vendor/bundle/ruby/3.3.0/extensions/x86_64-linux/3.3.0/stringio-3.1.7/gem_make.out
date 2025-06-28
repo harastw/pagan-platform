@@ -1,0 +1,26 @@
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.7/ext/stringio
+/usr/bin/ruby33 extconf.rb
+checking for rb_io_mode_t in ruby/io.h... no
+creating Makefile
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-a1wccz sitelibdir\=./.gem.20250626-18798-a1wccz clean
+rm -f 
+rm -fr stringio.so false stringio.o *.bak mkmf.log .*.time
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-a1wccz sitelibdir\=./.gem.20250626-18798-a1wccz
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I.   -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o stringio.o -c stringio.c
+rm -f stringio.so
+x86_64-pc-linux-gnu-gcc -shared -o stringio.so stringio.o -L. -L/usr/lib64 -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby33  -lm -lpthread  -lc
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-a1wccz sitelibdir\=./.gem.20250626-18798-a1wccz install
+mkdir -p . ./.gem.20250626-18798-a1wccz
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20250626-18798-a1wccz
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-a1wccz sitelibdir\=./.gem.20250626-18798-a1wccz clean
+rm -f 
+rm -fr stringio.so false stringio.o *.bak mkmf.log .*.time

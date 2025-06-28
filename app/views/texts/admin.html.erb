@@ -1,0 +1,42 @@
+<h2>Добавить новый текст</h2>
+
+<% if @text.errors.any? %>
+  <div style="color: red">
+    <p><strong>Исправьте ошибки:</strong></p>
+    <ul>
+      <% @text.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with model: @text, url: admin_texts_path, method: :post do |form| %>
+  <p>
+    <%= form.label :title, "Заголовок" %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :language, "Язык" %><br>
+    <%= form.text_field :language %>
+  </p>
+
+  <p>
+    <%= form.label :period, "Период" %><br>
+    <%= form.text_field :period %>
+  </p>
+
+  <p>
+    <%= form.label :content, "Содержание" %><br>
+    <%= form.text_area :content, rows: 10 %>
+  </p>
+
+  <p>
+    <%= form.submit "Добавить текст", style: "background-color: #cccccc; border: 1px solid black;" %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to "← Назад к списку", texts_path %>
+</p>

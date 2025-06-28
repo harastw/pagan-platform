@@ -1,0 +1,29 @@
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+/usr/bin/ruby33 extconf.rb
+checking for fdatasync() in unistd.h... yes
+checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-qr2fg0 sitelibdir\=./.gem.20250626-18798-qr2fg0 clean
+rm -f 
+rm -fr bootsnap.so false bootsnap.o *.bak mkmf.log .*.time
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-qr2fg0 sitelibdir\=./.gem.20250626-18798-qr2fg0
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DHAVE_FDATASYNC    -D_GNU_SOURCE -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC -O3 -std=c99  -o bootsnap.o -c bootsnap.c
+rm -f bootsnap.so
+x86_64-pc-linux-gnu-gcc -shared -o bootsnap.so bootsnap.o -L. -L/usr/lib64 -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby33  -lm -lpthread  -lc
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-qr2fg0 sitelibdir\=./.gem.20250626-18798-qr2fg0 install
+mkdir -p . ./.gem.20250626-18798-qr2fg0/bootsnap
+exit > .sitearchdir.-.bootsnap.time
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20250626-18798-qr2fg0/bootsnap
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-qr2fg0 sitelibdir\=./.gem.20250626-18798-qr2fg0 clean
+rm -f 
+rm -fr bootsnap.so false bootsnap.o *.bak mkmf.log .*.time

@@ -1,0 +1,25 @@
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+/usr/bin/ruby33 extconf.rb
+creating Makefile
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-32k0rm sitelibdir\=./.gem.20250626-18798-32k0rm clean
+rm -f 
+rm -fr cparse.so false cparse.o *.bak mkmf.log .*.time
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-32k0rm sitelibdir\=./.gem.20250626-18798-32k0rm
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DRACC_INFO_VERSION=1.8.1    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o cparse.o -c cparse.c
+rm -f cparse.so
+x86_64-pc-linux-gnu-gcc -shared -o cparse.so cparse.o -L. -L/usr/lib64 -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby33  -lm -lpthread  -lc
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-32k0rm sitelibdir\=./.gem.20250626-18798-32k0rm install
+mkdir -p . ./.gem.20250626-18798-32k0rm/racc
+exit > .sitearchdir.-.racc.time
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20250626-18798-32k0rm/racc
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-32k0rm sitelibdir\=./.gem.20250626-18798-32k0rm clean
+rm -f 
+rm -fr cparse.so false cparse.o *.bak mkmf.log .*.time

@@ -1,0 +1,14 @@
+<h1>Древние тексты</h1>
+
+<% if @texts.any? %>
+  <ul>
+    <% @texts.each do |text| %>
+      <li>
+        <strong><%= text.title %></strong> (<%= text.language %>, <%= text.period %>)<br>
+        <%= text.content %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Пока нет текстов.</p>
+<% end %>

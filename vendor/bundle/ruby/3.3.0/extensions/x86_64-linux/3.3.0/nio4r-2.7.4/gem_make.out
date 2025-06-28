@@ -1,0 +1,60 @@
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
+/usr/bin/ruby33 extconf.rb
+checking for unistd.h... yes
+checking for rb_io_descriptor()... yes
+checking for linux/aio_abi.h... yes
+checking for linux/io_uring.h... yes
+checking for sys/select.h... yes
+checking for port_event_t in poll.h... no
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for port_event_t in port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-gunatq sitelibdir\=./.gem.20250626-18798-gunatq clean
+rm -f 
+rm -fr nio4r_ext.so false bytebuffer.o monitor.o nio4r_ext.o selector.o *.bak mkmf.log .*.time
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-gunatq sitelibdir\=./.gem.20250626-18798-gunatq
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DHAVE_UNISTD_H -DHAVE_RB_IO_DESCRIPTOR -DHAVE_LINUX_AIO_ABI_H -DEV_USE_LINUXAIO -DHAVE_LINUX_IO_URING_H -DEV_USE_IOURING -DHAVE_SYS_SELECT_H -DEV_USE_SELECT -DHAVE_SYS_EPOLL_H -DEV_USE_EPOLL -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_RESOURCE_H -DEV_STANDALONE    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o bytebuffer.o -c bytebuffer.c
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DHAVE_UNISTD_H -DHAVE_RB_IO_DESCRIPTOR -DHAVE_LINUX_AIO_ABI_H -DEV_USE_LINUXAIO -DHAVE_LINUX_IO_URING_H -DEV_USE_IOURING -DHAVE_SYS_SELECT_H -DEV_USE_SELECT -DHAVE_SYS_EPOLL_H -DEV_USE_EPOLL -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_RESOURCE_H -DEV_STANDALONE    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o monitor.o -c monitor.c
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DHAVE_UNISTD_H -DHAVE_RB_IO_DESCRIPTOR -DHAVE_LINUX_AIO_ABI_H -DEV_USE_LINUXAIO -DHAVE_LINUX_IO_URING_H -DEV_USE_IOURING -DHAVE_SYS_SELECT_H -DEV_USE_SELECT -DHAVE_SYS_EPOLL_H -DEV_USE_EPOLL -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_RESOURCE_H -DEV_STANDALONE    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o nio4r_ext.o -c nio4r_ext.c
+In file included from nio4r_ext.c:6:
+../libev/ev.c:2136:31: warning: ‘ev_default_loop_ptr’ initialized and declared ‘extern’
+ 2136 |   EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+      |                               ^~~~~~~~~~~~~~~~~~~
+../libev/ev.c: In function ‘evpipe_write’:
+../libev/ev.c:2798:11: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2798 |           write (evpipe [1], &counter, sizeof (uint64_t));
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2810:11: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2810 |           write (evpipe [1], &(evpipe [1]), 1);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c: In function ‘pipecb’:
+../libev/ev.c:2831:11: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2831 |           read (evpipe [1], &counter, sizeof (uint64_t));
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2845:11: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2845 |           read (evpipe [0], &dummy, sizeof (dummy));
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DHAVE_UNISTD_H -DHAVE_RB_IO_DESCRIPTOR -DHAVE_LINUX_AIO_ABI_H -DEV_USE_LINUXAIO -DHAVE_LINUX_IO_URING_H -DEV_USE_IOURING -DHAVE_SYS_SELECT_H -DEV_USE_SELECT -DHAVE_SYS_EPOLL_H -DEV_USE_EPOLL -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_RESOURCE_H -DEV_STANDALONE    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o selector.o -c selector.c
+selector.c: In function ‘NIO_Selector_wakeup’:
+selector.c:525:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  525 |     write(selector->wakeup_writer, "\0", 1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rm -f nio4r_ext.so
+x86_64-pc-linux-gnu-gcc -shared -o nio4r_ext.so bytebuffer.o monitor.o nio4r_ext.o selector.o -L. -L/usr/lib64 -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby33  -lm -lpthread  -lc
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-gunatq sitelibdir\=./.gem.20250626-18798-gunatq install
+mkdir -p . ./.gem.20250626-18798-gunatq
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20250626-18798-gunatq
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20250626-18798-gunatq sitelibdir\=./.gem.20250626-18798-gunatq clean
+rm -f 
+rm -fr nio4r_ext.so false bytebuffer.o monitor.o nio4r_ext.o selector.o *.bak mkmf.log .*.time
