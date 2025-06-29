@@ -1,0 +1,32 @@
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/bcrypt-3.1.20/ext/mri
+/usr/bin/ruby33 extconf.rb
+creating Makefile
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/bcrypt-3.1.20/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250629-5524-s6yx6b sitelibdir\=./.gem.20250629-5524-s6yx6b clean
+rm -f 
+rm -fr bcrypt_ext.so false bcrypt_ext.o crypt_blowfish.o x86.o crypt_gensalt.o wrapper.o *.bak mkmf.log .*.time
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/bcrypt-3.1.20/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250629-5524-s6yx6b sitelibdir\=./.gem.20250629-5524-s6yx6b
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -D__SKIP_GNU    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o bcrypt_ext.o -c bcrypt_ext.c
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -D__SKIP_GNU    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o crypt_blowfish.o -c crypt_blowfish.c
+x86_64-pc-linux-gnu-gcc  -D__SKIP_GNU     -c -o x86.o x86.S
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -D__SKIP_GNU    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o crypt_gensalt.o -c crypt_gensalt.c
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -D__SKIP_GNU    -fPIC -march=native -O2 -pipe -fno-omit-frame-pointer -fno-strict-aliasing -std=gnu17 -fPIC  -o wrapper.o -c wrapper.c
+wrapper.c:182:60: warning: ‘struct crypt_data’ declared inside parameter list will not be visible outside of this definition or declaration
+  182 | char *crypt_r(const char *key, const char *setting, struct crypt_data *data)
+      |                                                            ^~~~~~~~~~
+rm -f bcrypt_ext.so
+x86_64-pc-linux-gnu-gcc -shared -o bcrypt_ext.so bcrypt_ext.o crypt_blowfish.o x86.o crypt_gensalt.o wrapper.o -L. -L/usr/lib64 -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby33  -lm -lpthread  -lc
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/bcrypt-3.1.20/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250629-5524-s6yx6b sitelibdir\=./.gem.20250629-5524-s6yx6b install
+mkdir -p . ./.gem.20250629-5524-s6yx6b
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20250629-5524-s6yx6b
+
+current directory: /home/sark/Source/Ruby/pagan-platform/vendor/bundle/ruby/3.3.0/gems/bcrypt-3.1.20/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250629-5524-s6yx6b sitelibdir\=./.gem.20250629-5524-s6yx6b clean
+rm -f 
+rm -fr bcrypt_ext.so false bcrypt_ext.o crypt_blowfish.o x86.o crypt_gensalt.o wrapper.o *.bak mkmf.log .*.time
