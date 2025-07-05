@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: postgres:17.5
+    restart: always
+    environment:
+      POSTGRES_USER: rails
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: pagan_platform_development
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails server -b 0.0.0.0"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_HOST: localhost
+      DATABASE_USER: rails
+      DATABASE_PASSWORD: password

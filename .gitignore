@@ -32,3 +32,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Sark written - Ignore .env for protecc your db password
+/.env
+.env.local

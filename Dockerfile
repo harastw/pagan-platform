@@ -1,72 +1,53 @@
-# syntax=docker/dockerfile:1
-# check=error=true
+# Используем официальный Ruby образ с BuildKit
+# syntax=docker/dockerfile:1.4
+FROM ruby:3.3.0-slim
 
-# This Dockerfile is designed for production, not development. Use with Kamal or build'n'run by hand:
-# docker build -t pagan_platform .
-# docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name pagan_platform pagan_platform
+# Включаем BuildKit secrets для приватных гемов (опционально)
+# Это позволяет использовать `--secret` при сборке
+RUN --mount=type=cache,target=/usr/local/bundle \
+    apt-get update -qq && \
+    apt-get install -y --no-install-recommends \
+    build-essential \
+    libyaml-dev \
+    libpq-dev \
+    nodejs \
+    tzdata \
+    curl \
+    git \
+    && rm -rf /var/lib/apt/lists/*
 
-# For a containerized dev environment, see Dev Containers: https://guides.rubyonrails.org/getting_started_with_devcontainer.html
+# Рабочая директория
+WORKDIR /app
 
-# Make sure RUBY_VERSION matches the Ruby version in .ruby-version
-ARG RUBY_VERSION=3.3.8
-FROM docker.io/library/ruby:$RUBY_VERSION-slim AS base
-
-# Rails app lives here
-WORKDIR /rails
-
-# Install base packages
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl libjemalloc2 libvips sqlite3 && \
-    rm -rf /var/lib/apt/lists /var/cache/apt/archives
-
-# Set production environment
-ENV RAILS_ENV="production" \
-    BUNDLE_DEPLOYMENT="1" \
-    BUNDLE_PATH="/usr/local/bundle" \
-    BUNDLE_WITHOUT="development"
-
-# Throw-away build stage to reduce size of final image
-FROM base AS build
-
-# Install packages needed to build gems
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential git libyaml-dev pkg-config && \
-    rm -rf /var/lib/apt/lists /var/cache/apt/archives
-
-# Install application gems
+# Копируем Gemfile и Gemfile.lock для установки гемов
 COPY Gemfile Gemfile.lock ./
-RUN bundle install && \
-    rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
-    bundle exec bootsnap precompile --gemfile
 
-# Copy application code
+# Установка гемов с кэшированием
+RUN --mount=type=cache,target=/usr/local/bundle \
+    gem install bundler && \
+    bundle config set path 'vendor/bundle' && \
+    bundle install --jobs $(nproc) --retry 3
+
+# Копируем остальные файлы проекта
 COPY . .
 
-# Precompile bootsnap code for faster boot times
-RUN bundle exec bootsnap precompile app/ lib/
+# Исправляем shebang в бинстабсах (если нужно)
+RUN sed -i '1s/.*/#!\/usr\/bin\/env ruby/' bin/rails bin/rake || true
 
-# Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
+# Обновляем PATH
+ENV GEM_HOME="/app/vendor/bundle"
+ENV PATH="$GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH"
 
+# Проверяем, что boot.rb существует
+RUN if [ ! -f config/boot.rb ]; then \
+      echo "config/boot.rb отсутствует, создаю..." && \
+      echo "ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __dir__)" > config/boot.rb && \
+      echo "require 'bundler/setup'" >> config/boot.rb && \
+      echo "require 'bootsnap/setup' if defined?(Bootsnap)" >> config/boot.rb; \
+    fi
 
+# Экспортируем порт
+EXPOSE 3000
 
-
-# Final stage for app image
-FROM base
-
-# Copy built artifacts: gems, application
-COPY --from=build "${BUNDLE_PATH}" "${BUNDLE_PATH}"
-COPY --from=build /rails /rails
-
-# Run and own only the runtime files as a non-root user for security
-RUN groupadd --system --gid 1000 rails && \
-    useradd rails --uid 1000 --gid 1000 --create-home --shell /bin/bash && \
-    chown -R rails:rails db log storage tmp
-USER 1000:1000
-
-# Entrypoint prepares the database.
-ENTRYPOINT ["/rails/bin/docker-entrypoint"]
-
-# Start server via Thruster by default, this can be overwritten at runtime
-EXPOSE 80
-CMD ["./bin/thrust", "./bin/rails", "server"]
+# Команда по умолчанию — запуск Rails через Bundler
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
